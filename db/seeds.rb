@@ -1,5 +1,7 @@
 require "active_record"
 require_relative "connection.rb"
+require_relative "../lib/user.rb"
+require_relative "../lib/connection.rb"
 
 users = [
 ["John", "Doe", "JohnDoe", "password", "JohnDoe@example.com"],
