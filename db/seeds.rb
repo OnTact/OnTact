@@ -22,9 +22,9 @@ end
 users = User.all
 
 25.times do
-  Connection.create({initiator_id: users.sample.id, receiver_id: users.sample.id, pending: false, is_connected: true, type: "personal"})
+  Connection.create({initiator_id: users.sample.id, receiver_id: users.sample.id, pending: false, is_connected: true, connection_type: "personal"})
 end
 
 25.times do
-  Connection.create({initiator_id: users.sample.id, receiver_id: users.sample.id, pending: true, is_connected: false, type: "professional"})
+  Connection.create({initiator_id: users.sample.id, receiver_id: users.sample.id, pending: true, is_connected: false, connection_type: "professional"})
 end
