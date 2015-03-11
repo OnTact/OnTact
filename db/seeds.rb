@@ -1,3 +1,6 @@
+require "active_record"
+require_relative "connection.rb"
+
 users = [
 ["John", "Doe", "JohnDoe", "password", "JohnDoe@example.com"],
 ["Jane", "Doe", "JaneDoe", "password", "JaneDoe@example.com"],
