@@ -16,7 +16,7 @@ users = [
 ["Frank", "Francis", "FFrancis", "password", "FFrancis@example.com"],
 ]
 users.each do |f_name, l_name, username, password, account_email|
-  User.create({f_name: first_name, l_name: last_name, username: username, password: password, account_email: account_email})
+  User.create({f_name: f_name, l_name: l_name, username: username, password: password, account_email: account_email})
 end
 
 users = User.all
