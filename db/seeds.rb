@@ -15,16 +15,16 @@ users = [
 ["Jacob", "Jacobson", "JJacobson", "password", "JJacobson@example.com"],
 ["Frank", "Francis", "FFrancis", "password", "FFrancis@example.com"],
 ]
-users.each do |first_name, last_name, username, password, account_email|
-  User.create({first_name: first_name, last_name: last_name, username: username, password: password, account_email: account_email})
+users.each do |f_name, l_name, username, password, account_email|
+  User.create({f_name: first_name, l_name: last_name, username: username, password: password, account_email: account_email})
 end
 
 users = User.all
 
 25.times do
-  Connection.create({initiator_id: users.sample.id, receiver_id: users.sample.id, pending: false, connected: true, type: "personal"})
+  Connection.create({initiator_id: users.sample.id, receiver_id: users.sample.id, pending: false, is_connected: true, type: "personal"})
 end
 
 25.times do
-  Connection.create({initiator_id: users.sample.id, receiver_id: users.sample.id, pending: true, connected: false, type: "professional"})
+  Connection.create({initiator_id: users.sample.id, receiver_id: users.sample.id, pending: true, is_connected: false, type: "professional"})
 end
