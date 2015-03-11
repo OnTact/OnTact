@@ -4,3 +4,4 @@ gem "sinatra"
 gem 'pry'
 gem 'bcrypt'
 gem 'sinatra-activerecord'
+gem 'pg'
