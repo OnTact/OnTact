@@ -4,6 +4,7 @@ Bundler.require
 require './controllers/application_controller'
 require './controllers/sessions_controller'
 require './controllers/users_controller'
+require './helpers/authentication_helper'
 require './lib/connection'
 require './lib/user'
 
