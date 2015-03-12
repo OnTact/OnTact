@@ -22,13 +22,16 @@
 <body>
 	<nav>
 		<h1>OnTact</h1> 
-			<form action="/login" method="get">
-				<input type="submit" value="Log in">
-			</form>
+		<% if session[:current_user] %>
 			<form action="/sessions" method="post">
 				<input type="hidden" name="_method" value="delete">
 				<input type="submit" value="Log out">
 			</form>
+		<% else %>
+			<form action="/login" method="get">
+				<input type="submit" value="Log in">
+			</form>
+		<% end %>
 	</nav>
 	
 	<%= yield %>
