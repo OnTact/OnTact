@@ -18,4 +18,8 @@ class ApplicationController < Sinatra::Base
     erb :login
   end
 
+  get '/new' do
+    erb :new
+  end
+
 end
