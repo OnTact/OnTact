@@ -1,8 +1,8 @@
 <section id="dash-nav">
-	<div id="profile-bttn" class="dash-nav-div"><button id="get-profile">Your Profile</button></div>
-	<div id="connections-bttn" class="dash-nav-div"><button id="get-connections">All Connections</button></div>
-	<div id="notifications-bttn" class="dash-nav-div"><button id="get-notifications">Notifications</button></div>
-	<div id="add-connection-btnn" class="dash-nav-div"><button id="add-connection">Add Connection</button></div>
+	<div id="profile-bttn" class="dash-nav-div">Your Profile</div>
+	<div id="connections-bttn" class="dash-nav-div">All Connections</div>
+	<div id="notifications-bttn" class="dash-nav-div">Notifications</div>
+	<div id="add-connection-btnn" class="dash-nav-div">Add Connection</div>
 </section>
 
 <section id="container">
@@ -92,19 +92,4 @@
 	<div id="profile-edit-save-button"><div>
 </script>
 
-<script type="text/javascript" id="connection-view-template">
-	<div class="connection-div">
-		<h3>OnTact</h3>
-		<img src="<%= @user.image %>">
-		<h2><%= @user.f_name %> <%= @user.l_name %></h2>
-		<ul>
-			<li><%= @user.headline %></li>
-			<li><%= @user.personal_phone %></li>
-			<li><%= @user.personal_email %></li>
-			<li><%= @user.professional_phone %></li>
-			<li><%= @user.professional_email %></li>
-			<li><%= @user.company %></li>
-			<li><%= @user.position %></li>
-		</ul>
-	</div>
-</script>
+
