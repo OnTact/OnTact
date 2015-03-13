@@ -14,7 +14,7 @@ CREATE TABLE users(
 	personal_email TEXT,
 	personal_phone VARCHAR,
 	professional_email TEXT,
-	phone VARCHAR(50),
+	professional_phone VARCHAR(50),
 	company VARCHAR(255),
 	website TEXT,
 	image INTEGER,
