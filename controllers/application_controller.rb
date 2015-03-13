@@ -10,16 +10,24 @@ class ApplicationController < Sinatra::Base
 
   enable :sessions, :method_override
 
+  # get index
 	get "/" do
 		erb :index
 	end
 
+  # get login form
   get '/login' do
     erb :login
   end
 
+  # get new user form
   get '/new' do
     erb :new
+  end
+
+  # creates new lead in the database after anon user inputs email address
+  post '/leads' do
+
   end
 
 end
