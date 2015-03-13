@@ -7,6 +7,7 @@ CREATE TABLE users(
 	f_name VARCHAR(255),
 	l_name VARCHAR(255),
 	username VARCHAR(255),
+	headline VARCHAR(255),
 	password_digest TEXT,
 	account_email TEXT,
 	updated_at TIMESTAMP,
@@ -16,8 +17,9 @@ CREATE TABLE users(
 	professional_email TEXT,
 	professional_phone VARCHAR(50),
 	company VARCHAR(255),
+	position VARCHAR(100),
 	website TEXT,
-	image INTEGER,
+	image VARCHAR(50),
 	card_layout INTEGER,
 	connection_count INTEGER,
 	points INTEGER
