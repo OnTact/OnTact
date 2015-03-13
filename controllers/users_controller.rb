@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   # get user's dashboard
   get '/:id' do
-
+  	erb :dashboard
   end
 
   # update user's profile information

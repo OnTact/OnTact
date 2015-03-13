@@ -3,6 +3,7 @@ class ConnectionsController < ApplicationController
   # get all connections from server and send as json string
   ## needs to be changed to reflect where receiver id or initiator id == current user id
   get "/" do
+  	binding.pry
     Connection.all.to_json
   end
 
