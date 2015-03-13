@@ -1,8 +1,8 @@
 <section id="dash-nav">
-	<div id="profile-bttn" class="dash-nav-div">1</div>
-	<div id="connections-bttn" class="dash-nav-div">2</div>
-	<div id="notifications-bttn" class="dash-nav-div">3</div>
-	<div id="add-connection-btnn" class="dash-nav-div">4</div>
+	<div id="profile-bttn" class="dash-nav-div"><button id="get-profile">Your Profile</button></div>
+	<div id="connections-bttn" class="dash-nav-div"><button id="get-connections">All Connections</button></div>
+	<div id="notifications-bttn" class="dash-nav-div"><button id="get-notifications">Notifications</button></div>
+	<div id="add-connection-btnn" class="dash-nav-div"><button id="add-connection">Add Connection</button></div>
 </section>
 
 <section id="container">
@@ -11,8 +11,9 @@
 
 </section>
 
-<!-- TEMPLATES -->
+<!-- LIBRARIES -->
 
+<!-- TEMPLATES -->
 
 <!-- profile view template -->
 <script type="text/javascript" id="profile-view-template">
@@ -86,5 +87,22 @@
 
 // 	<div id="profile-edit-save-button"><div>
 // </script>
+
+	<script type="text/javascript" id="connection-view-template">
+		<div class="connection-div">
+			<h3><%= type %> OnTact</h3>
+			<img src="<%= image %>">
+			<h2><%= f_name %> <%= l_name %></h2>
+			<ul>
+				<li><%= headline %></li>
+				<li><%= personal_phone %></li>
+				<li><%= personal_email %></li>
+				<li><%= professional_phone %></li>
+				<li><%= professional_email %></li>
+				<li><%= company %></li>
+				<li><%= position %></li>
+			</ul>
+		</div>
+	</script>
 
 </script>
