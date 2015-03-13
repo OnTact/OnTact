@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 
+  # create new session (log in)
 	post '/' do
 		user = User.find_by({username: params[:username]})
     if user && user.password == params[:password]
@@ -10,6 +11,7 @@ class SessionsController < ApplicationController
     end
 	end
 
+  # destroy session (log out)
 	delete '/' do
     session[:current_user] = nil
     redirect '/'
