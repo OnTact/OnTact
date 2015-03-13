@@ -11,6 +11,10 @@
 
 </section>
 
+<!-- Local JS File -->
+
+<script type="text/javascript" src="javascripts/dashboard.js"></script>
+
 <!-- LIBRARIES -->
 
 <!-- TEMPLATES -->
@@ -50,59 +54,57 @@
 </script>
 
 <!-- profile-edit-template -->
-<script>
 
-// <script type="text/javascript" id="profile-edit-template">
-// 	<div id="profile-view-template-card-all">
-// 		<div class="card-image-edit">
-// 			<div class="card-image-"></div>
-// 			<div class="card-image-edit-buttn"></div>
-// 		</div class="card-info-edit">
-// 			<form>
-// 				Name: <field></field>
-// 				User Name: <field</field>
-// 				Professional Email: <field</field>
-// 				Phone: <field</field>
-// 				Company: <field</field>
-// 				Position: <field</field>
-// 				Website: <field</field>
-// 			</form>
-// 		<div>
-// 	</div>
 
-// 	<div id="profile-edit-template-card-professional-template">
-// 		<div class="card-image">
-// 		</div>
-// 		<div class="card-info">
-// 			<h3>Name:</h3>
-// 			<p>User Name:</p>
-// 			<p>Professional Email:</p>
-// 			<p>Phone</p>
-// 			<p>Company</p>
-// 			<p>Position</p>
-// 			<p>Website</p>
-// 			<p></p>
-// 		<div>
-// 	</div>
+<script type="text/javascript" id="profile-edit-template">
+	<div id="profile-view-template-card-all">
+		<div class="card-image-edit">
+			<div class="card-image-"></div>
+			<div class="card-image-edit-buttn"></div>
+		</div class="card-info-edit">
+			<form>
+				Name: <field></field>
+				User Name: <field</field>
+				Professional Email: <field</field>
+				Phone: <field</field>
+				Company: <field</field>
+				Position: <field</field>
+				Website: <field</field>
+			</form>
+		<div>
+	</div>
 
-// 	<div id="profile-edit-save-button"><div>
-// </script>
-
-	<script type="text/javascript" id="connection-view-template">
-		<div class="connection-div">
-			<h3><%= type %> OnTact</h3>
-			<img src="<%= image %>">
-			<h2><%= f_name %> <%= l_name %></h2>
-			<ul>
-				<li><%= headline %></li>
-				<li><%= personal_phone %></li>
-				<li><%= personal_email %></li>
-				<li><%= professional_phone %></li>
-				<li><%= professional_email %></li>
-				<li><%= company %></li>
-				<li><%= position %></li>
-			</ul>
+	<div id="profile-edit-template-card-professional-template">
+		<div class="card-image">
 		</div>
-	</script>
+		<div class="card-info">
+			<h3>Name:</h3>
+			<p>User Name:</p>
+			<p>Professional Email:</p>
+			<p>Phone</p>
+			<p>Company</p>
+			<p>Position</p>
+			<p>Website</p>
+			<p></p>
+		<div>
+	</div>
 
+	<div id="profile-edit-save-button"><div>
+</script>
+
+<script type="text/javascript" id="connection-view-template">
+	<div class="connection-div">
+		<h3>OnTact</h3>
+		<img src="<%= @user.image %>">
+		<h2><%= @user.f_name %> <%= @user.l_name %></h2>
+		<ul>
+			<li><%= @user.headline %></li>
+			<li><%= @user.personal_phone %></li>
+			<li><%= @user.personal_email %></li>
+			<li><%= @user.professional_phone %></li>
+			<li><%= @user.professional_email %></li>
+			<li><%= @user.company %></li>
+			<li><%= @user.position %></li>
+		</ul>
+	</div>
 </script>
