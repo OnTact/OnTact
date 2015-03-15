@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
   # get user's dashboard
   get '/:id' do
+  	@user = User.find(session[:current_user])
   	erb :dashboard
   end
 
