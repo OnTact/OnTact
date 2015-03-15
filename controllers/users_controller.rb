@@ -11,7 +11,12 @@ class UsersController < ApplicationController
 
   # get user's dashboard
   get '/:id' do
-  	@user = User.find(session[:current_user])
+  	id = session[:current_user]
+  	@user = User.find(id)
+  	connections = Connection.where("receiver_id = #{id} or initiator_id = #{id}")
+  	binding.pry
+  	@connected_users = @user.connected_users(connections, id)
+  	binding.pry
   	erb :dashboard
   end
 
