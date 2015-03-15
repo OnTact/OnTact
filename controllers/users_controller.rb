@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	# create new user
+  # create new user
   post '/' do
     user = User.new(params[:user])
     user.username = params[:username]
@@ -11,7 +11,8 @@ class UsersController < ApplicationController
 
   # get user's dashboard
   get '/:id' do
-  	erb :dashboard
+    @user = User.find(session[:current_user])
+    erb :dashboard
   end
 
   # update user's profile information
