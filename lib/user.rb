@@ -24,4 +24,8 @@ class User < ActiveRecord::Base
     return users
   end
 
+  def user_params(params)
+    params.slice(*User.column_names)
+  end
+
 end

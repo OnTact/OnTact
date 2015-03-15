@@ -21,75 +21,105 @@
 
 <!-- profile view template -->
 <script type="text/javascript" id="profile-view-template">
-	<div id="profile-view-template-card-all">
+	<div id="personal-card">
+		<h2>Personal</h2>
 		<div class="card-image">
+			<img src=<%= @user.image %>>
 		</div>
 		<div class="card-info">
-			<h3>Name:</h3>
-			<p>User Name:</p>
-			<p>Personal Email:</p>
-			<p>Professional Email:</p>
-			<p>Phone</p>
-			<p>Company</p>
-			<p>Position</p>
-			<p>Website</p>
+			<h3><%= @user.f_name %> <%= @user.l_name %></h3>
+			<h4>Headline (currently not in DB)</h4>
+
+			<h4>Personal Phone</h4>
+			<p><%= @user.personal_phone %></p>
+
+			<h4>Work Phone</h4>
+			<p><%= @user.professional_phone %></p>
+
+			<h4>Personal Email</h4>
+			<p><%= @user.personal_email %></p>
+
+			<h4>Work Email</h4>
+			<p><%= @user.professional_email %></p>
+
+			<p><%= @user.position %> | <%= @user.company %> | <%= @user.website %></p>
+
 		<div>
 	</div>
 
-	<div id="profile-view-template-card-professional">
+	<div id="professional-card">
+		<h2>Professional</h2>
 		<div class="card-image">
+			<img src=<%= @user.image %>>
 		</div>
 		<div class="card-info">
-			<h3>Name:</h3>
-			<p>User Name:</p>
-			<p>Professional Email:</p>
-			<p>Phone</p>
-			<p>Company</p>
-			<p>Position</p>
-			<p>Website</p>
+			<h3><%= @user.f_name %> <%= @user.l_name %></h3>
+			<h4>Headline (currently not in DB)</h4>
+
+			<h4>Work Phone</h4>
+			<p><%= @user.professional_phone %></p>
+
+			<h4>Work Email</h4>
+			<p><%= @user.professional_email %></p>
+
+			<p><%= @user.position %> | <%= @user.company %> | <%= @user.website %></p>
+
 		<div>
 	</div>
 
-	<div id="profile-edit-button"><div>
+	<div id="profile-edit-button">Edit<div>
 </script>
 
 <!-- profile-edit-template -->
 
 
 <script type="text/javascript" id="profile-edit-template">
-	<div id="profile-view-template-card-all">
-		<div class="card-image-edit">
-			<div class="card-image-"></div>
-			<div class="card-image-edit-buttn"></div>
-		</div class="card-info-edit">
-			<form>
-				Name: <field></field>
-				User Name: <field</field>
-				Professional Email: <field</field>
-				Phone: <field</field>
-				Company: <field</field>
-				Position: <field</field>
-				Website: <field</field>
-			</form>
-		<div>
+	<div id="profile-edit">
+		<form method="POST" action="/users/<%= @user.id %>">
+			<input type="hidden" name="_method" value="PUT"/>
+			<label>First Name
+				<input type="text" name="f_name" value=<%= @user.f_name %>>
+			<label>
+			<br>
+			<label>Last Name
+				<input type="text" name="l_name" value=<%= @user.l_name %>>
+			<label>
+			<br>
+			<label>Headline
+				<input type="text" name="headline" value="not in db yet">
+			<label>
+			<br>
+			<label>Personal Phone
+				<input type="text" name="personal_phone" value=<%= @user.personal_phone %>>
+			<label>
+			<br>
+			<label>Work Phone
+				<input type="text" name="professional_phone" value=<%= @user.professional_phone %>>
+			<label>
+			<br>
+			<label>Personal Email
+				<input type="text" name="personal_email" value=<%= @user.personal_email %>>
+			<label>
+			<br>
+			<label>Work Email
+				<input type="text" name="professional_email" value=<%= @user.professional_email %>>
+			<label>
+			<br>
+			<label>Position
+				<input type="text" name="position" value=<%= @user.position %>>
+			<label>
+			<br>
+			<label>Company
+				<input type="text" name="company" value=<%= @user.company %>>
+			<label>
+			<br>
+			<label>Website
+				<input type="text" name="website" value=<%= @user.website %>>
+			<label>
+			<br>
+			<input type="submit">
+		</form>
 	</div>
-
-	<div id="profile-edit-template-card-professional-template">
-		<div class="card-image">
-		</div>
-		<div class="card-info">
-			<h3>Name:</h3>
-			<p>User Name:</p>
-			<p>Professional Email:</p>
-			<p>Phone</p>
-			<p>Company</p>
-			<p>Position</p>
-			<p>Website</p>
-			<p></p>
-		<div>
-	</div>
-
-	<div id="profile-edit-save-button"><div>
 </script>
 
 
