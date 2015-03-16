@@ -2,7 +2,7 @@
 	<div id="profile-bttn" class="dash-nav-div">Your Profile</div>
 	<div id="connections-bttn" class="dash-nav-div">All Connections</div>
 	<div id="notifications-bttn" class="dash-nav-div">Notifications</div>
-	<div id="add-connection-btnn" class="dash-nav-div">Add Connection</div>
+	<div id="add-connection-bttn" class="dash-nav-div">Add Connection</div>
 </section>
 
 <section id="container">
@@ -122,5 +122,18 @@
 	</div>
 	<a href="/users/<%= @user.id %>"><button>Cancel</button></a>
 </script>
+
+<!-- ADD Connection Template -->
+
+<script id="add-connection-template" type="text/javascript">
+	<h3>Add OnTact</h3>
+		<form>
+			<input id="find-username" type="text" placeholder="enter a username">
+			<input id="find-connection-bttn" type="submit" value="connect">
+		</form>
+</script>
+
+
+
 
 

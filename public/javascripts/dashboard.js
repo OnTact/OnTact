@@ -37,5 +37,27 @@ $(function(){
 	$("#add-connection-bttn").on('click', function(){
 		var addTemplate = $("#add-connection-template");
 		loadDom(addTemplate);
+
+			// render send-request-template
+		$("#find-connection-bttn").on('click', function(e){
+			e.preventDefault();
+			console.log("find button clicked");
+			var input = $("#find-username").val();
+			$.ajax({
+				url: '/finduser',
+				type: 'POST',
+				data: {username: input}
+			}).done(function(data){
+				console.log(data);
+			});
+
+			// 1. parse the data
+			// 2. render  template
+			// 3. get it into the db
+
+			// var profileEditTemplate = $("#send-request-template");
+			// loadDom(profileEditTemplate);	
+		});
 	});	
+
 });

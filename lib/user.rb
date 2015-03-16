@@ -1,6 +1,14 @@
+require_relative 'connection.rb'
+
 class User < ActiveRecord::Base
 	has_secure_password
   has_many(:connections)
+
+  # has_many :initiated_connections, class_name: Connection, foreign_key: initiator_id
+  # has_many :received_connections, class_name: Connection, foreign_key: receiver_id
+
+
+
   include BCrypt
 
   def password

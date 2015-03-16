@@ -3,7 +3,6 @@ class ConnectionsController < ApplicationController
   # get all connections from server and send as json string
   ## needs to be changed to reflect where receiver id or initiator id == current user id
   get "/" do
-  	binding.pry
     Connection.all.to_json
   end
 
@@ -14,7 +13,8 @@ class ConnectionsController < ApplicationController
 
   # create a connection after initiator adds; is_connected = false and pending = true
   post '/' do
-
+    receiver = User.find_by(username: params[:username])
+    initiator = User.find(session[:current_user])
   end
 
   # update a connection if a receiver accepts or rejects connection, or if either receiver or initiator "deletes" connection (is_connected = false)
