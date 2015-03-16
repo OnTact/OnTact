@@ -30,4 +30,9 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  post '/finduser' do
+    User.find_by(username: params[:username]).to_json
+
+  end
+
 end
