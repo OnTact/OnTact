@@ -49,15 +49,54 @@ $(function(){
 				data: {username: input}
 			}).done(function(data){
 				console.log(data);
+				var parsedConnection = JSON.parse(data);
+				// RENDER SEARCH RESULT PAGE:
+				$container.empty();
+
+				// search result template
+				var $searchResultTemplate = $('<div id="search-result-template">')
+				$container.append($searchResultTemplate);
+					// append header "connect with >username?"
+					var $resultHeader = $('<h3 class="srch-rslt-header">').text("Connect with >"+parsedConnection.username)
+					$searchResultTemplate.append($resultHeader);
+					// append connection preview card
+					var $resultPreviewCard = $('<div class="srch-rslt-preview">')
+					$searchResultTemplate.append($resultPreviewCard);
+				
+					var $h3 = $('<h3 class="srch-rslt-Name">').text(parsedConnection.f_name + " " +parsedConnection.l_name);
+					var $p1 = $('<p>').text(parsedConnection.position + " | " + parsedConnection.company);
+					var $p2 = $('<p>').text(parsedConnection.username);
+
+					$resultPreviewCard.append($h3);
+					$resultPreviewCard.append($p1);
+					$resultPreviewCard.append($p2);
+
+				// search result template & form
+				var $addSearchResultTemplate = $('<div id="add-search-result-template">')
+				
+					var $connectForm = $('<form id="add-connection-form" method="post" action="/connections">')
+
+					var $connectionTypePro = $('<p>Professional</p><input type="radio" name="connection_type" value="professional" checked><br>')
+					var $connectTypePer = $('<p>Personal</p><input type="radio" name="connection_type" value="personal"><br>')
+					var $connectInfo = $('<input type="text" name="additional_info" required placeholder="How did we meet?"><br>')
+					var $hiddenInput = $('<input type="hidden" name="receiver_id" value='+ parsedConnection.id +'>')
+					var $connectSubmit = $('<input type="submit" value="Request To Connect">')
+
+					$connectForm.append($connectionTypePro);
+					$connectForm.append($connectTypePer);
+					$connectForm.append($connectInfo);
+					$connectForm.append($hiddenInput);
+					$connectForm.append($connectSubmit);
+
+					$addSearchResultTemplate.append($connectForm);
+					$container.append($addSearchResultTemplate);
+
 			});
 
-			// 1. parse the data
-			// 2. render  template
-			// 3. get it into the db
-
-			// var profileEditTemplate = $("#send-request-template");
-			// loadDom(profileEditTemplate);	
 		});
 	});	
 
 });
+
+
+					

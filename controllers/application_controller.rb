@@ -31,7 +31,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/finduser' do
-    Pry.start(binding)
     User.find_by(username: params[:username]).to_json
 
   end
