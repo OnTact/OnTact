@@ -2,37 +2,40 @@ console.log('linked');
 
 var $container = $('#dash-content')
 
+function loadDom(template){
+	$container.empty();
+	$container.append(template.html());
+}
+
 $(function(){	
 
 	// render profile
 	$("#profile-bttn").on('click', function(){
-		console.log('clicked');
-		$container.empty();
 		var profileTemplate = $("#profile-view-template");
-		$container.append(profileTemplate.html());
+		loadDom(profileTemplate);
+
+		// render profile edit form
+		$("#profile-edit-button").on('click', function(){
+			var profileEditTemplate = $("#profile-edit-template");
+			loadDom(profileEditTemplate);	
+		});
 	});	
 
 	// render all contacts
 	$("#connections-bttn").on('click', function(){
-		console.log('clicked');
-		$container.empty();
 		var connectionsTemplate = $("#connections-all-template");
-		$container.append(connectionsTemplate.html());
+		loadDom(connectionsTemplate);
 	});	
 
 	// render notifications
 	$("#notifications-bttn").on('click', function(){
-		console.log('clicked');
-		$container.empty();
 		var notificationsTemplate = $("#notifications-view-template");
-		$container.append(notificationsTemplate.html());
+		loadDom(notificationsTemplate);
 	});	
 
 	// render add contact form
 	$("#add-connection-bttn").on('click', function(){
-		console.log('clicked');
-		$container.empty();
 		var addTemplate = $("#add-connection-template");
-		$container.append(addTemplate.html());
+		loadDom(addTemplate);
 	});	
 });
