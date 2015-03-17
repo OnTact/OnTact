@@ -36,15 +36,15 @@
 		<h1 id="logo"><a href="/">OnTact</a></h1> 
 		<% if session[:current_user] %>
 			<form class="nav-form" action="/sessions" method="post">
-				<input type="hidden" name="_method" value="delete">
-				<input type="submit" value="Log out">
+				<input class="nav-form-bttn" type="hidden" name="_method" value="delete">
+				<input class="nav-form-bttn" type="submit" value="Log out">
 			</form>
 		<% else %>
 			<form class="nav-form" action="/login" method="get">
-				<input type="submit" value="Log in">
+				<input class="nav-form-bttn" type="submit" value="Log in">
 			</form>
 		<% end %>
-	</nav class="clearfix">
+	</nav>
 
 	<section id="main" class="clearfix">
 	
@@ -52,7 +52,7 @@
 
 	</section>
 
-	<footer>
+	<footer class="clearfix">
 		<p>OnTact &copy; 2015</p>
 	</footer>
 
