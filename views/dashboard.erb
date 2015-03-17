@@ -28,7 +28,7 @@
 		</div>
 		<div class="card-info">
 			<h3><%= @user.f_name %> <%= @user.l_name %></h3>
-			<h4>Headline (currently not in DB)</h4>
+			<p><%= @user.headline %></p>
 
 			<h4>Personal Phone</h4>
 			<p><%= @user.personal_phone %></p>
@@ -44,7 +44,7 @@
 
 			<p><%= @user.position %> | <%= @user.company %> | <%= @user.website %></p>
 
-		<div>
+		</div>
 	</div>
 
 	<div id="professional-card">
@@ -54,7 +54,7 @@
 		</div>
 		<div class="card-info">
 			<h3><%= @user.f_name %> <%= @user.l_name %></h3>
-			<h4>Headline (currently not in DB)</h4>
+			<p><%= @user.headline %></p>
 
 			<h4>Work Phone</h4>
 			<p><%= @user.professional_phone %></p>
@@ -63,8 +63,7 @@
 			<p><%= @user.professional_email %></p>
 
 			<p><%= @user.position %> | <%= @user.company %> | <%= @user.website %></p>
-
-		<div>
+		</div>
 	</div>
 
 	<div id="profile-edit-button">Edit<div>
@@ -86,7 +85,7 @@
 			<label>
 			<br>
 			<label>Headline
-				<input type="text" name="headline" value="not in db yet">
+				<input type="text" name="headline" value=<%= @user.headline %>>
 			<label>
 			<br>
 			<label>Personal Phone

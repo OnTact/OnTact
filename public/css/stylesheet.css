@@ -136,3 +136,34 @@ footer p {
 	width: 200px;
 	height: 200px;
 }
+
+#container {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 3%;
+}
+
+#personal-card {
+	float: left;
+	margin-left: 20%;
+	border: 3px solid black;
+	padding: 3%;
+	width: 20%;
+}
+
+#professional-card {
+	float: right;
+	margin-right: 20%;
+	border: 3px solid black;
+	padding: 3%;
+	width: 20%;
+}
+
+#profile-edit-button {
+	border: 3px solid black;
+	width: 10%;
+	padding: 2%;
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+}
