@@ -123,6 +123,28 @@
 	<a href="/users/<%= @user.id %>"><button>Cancel</button></a>
 </script>
 
+<!-- VIEW Connections Template -->
+
+<script id="connections-all-template" type="text/javascript">
+	<h2>Your OnTacts</h2>
+
+	<div id="scrolladex">
+		<% @connected_users.each do |user| %>
+			<div class="item connection-card" id="<%= user.username %>">
+				<div class="card-image">
+					<img src=<%= user.image %>>
+				</div>
+				<div class="card-info">
+					<h3><%= user.f_name %> <%= user.l_name %></h3>
+					<p><%= user.position %> <%= user.company %></p>
+					<p><%= user.username %></p>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</script>
+
+
 <!-- ADD Connection Template -->
 
 <script id="add-connection-template" type="text/javascript">
