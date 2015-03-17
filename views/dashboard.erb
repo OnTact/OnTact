@@ -3,6 +3,7 @@
 	<div id="connections-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/connections.jpg"></div>
 	<div id="notifications-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/notifications.jpg"></div>
 	<div id="add-connection-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/add_connection.jpg"></div>
+	<hr>
 </section>
 
 <section id="container">
@@ -47,7 +48,7 @@
 		</div>
 	</div>
 
-	<div id="professional-card">
+	<div id="professional-card" class="clearfix">
 		<h2>Professional</h2>
 		<div class="card-image">
 			<img src=<%= @user.image %>>
@@ -66,6 +67,8 @@
 		</div>
 	</div>
 
+	<br>
+
 	<div id="profile-edit-button">Edit<div>
 </script>
 
@@ -74,49 +77,50 @@
 
 <script type="text/javascript" id="profile-edit-template">
 	<div id="profile-edit">
+	<h2 class="form-h2">Edit Your OnTact Info</h2>
 		<form method="POST" action="/users/<%= @user.id %>">
 			<input type="hidden" name="_method" value="PUT"/>
 			<label>First Name
-				<input type="text" name="f_name" value=<%= @user.f_name %>>
+				<input class="input-text" type="text" name="f_name" value=<%= @user.f_name %>>
 			<label>
 			<br>
 			<label>Last Name
-				<input type="text" name="l_name" value=<%= @user.l_name %>>
+				<input class="input-text-edit" type="text" name="l_name" value=<%= @user.l_name %>>
 			<label>
 			<br>
 			<label>Headline
-				<input type="text" name="headline" value=<%= @user.headline %>>
+				<input class="input-text-edit" type="text" name="headline" value=<%= @user.headline %>>
 			<label>
 			<br>
 			<label>Personal Phone
-				<input type="text" name="personal_phone" value=<%= @user.personal_phone %>>
+				<input class="input-text-edit" type="text" name="personal_phone" value=<%= @user.personal_phone %>>
 			<label>
 			<br>
 			<label>Work Phone
-				<input type="text" name="professional_phone" value=<%= @user.professional_phone %>>
+				<input class="input-text-edit" type="text" name="professional_phone" value=<%= @user.professional_phone %>>
 			<label>
 			<br>
 			<label>Personal Email
-				<input type="text" name="personal_email" value=<%= @user.personal_email %>>
+				<input class="input-text-edit" type="text" name="personal_email" value=<%= @user.personal_email %>>
 			<label>
 			<br>
 			<label>Work Email
-				<input type="text" name="professional_email" value=<%= @user.professional_email %>>
+				<input class="input-text-edit" type="text" name="professional_email" value=<%= @user.professional_email %>>
 			<label>
 			<br>
 			<label>Position
-				<input type="text" name="position" value=<%= @user.position %>>
+				<input class="input-text-edit" type="text" name="position" value=<%= @user.position %>>
 			<label>
 			<br>
 			<label>Company
-				<input type="text" name="company" value=<%= @user.company %>>
+				<input class="input-text-edit" type="text" name="company" value=<%= @user.company %>>
 			<label>
 			<br>
 			<label>Website
-				<input type="text" name="website" value=<%= @user.website %>>
+				<input class="input-text-edit" type="text" name="website" value=<%= @user.website %>>
 			<label>
 			<br>
-			<button id="submit-edit">Submit Changes</button>
+			<button class="input-submit" id="submit-edit">Submit Changes</button>
 		</form>
 	</div>
 	<a href="/users/<%= @user.id %>"><button>Cancel</button></a>
@@ -147,11 +151,13 @@
 <!-- ADD Connection Template -->
 
 <script id="add-connection-template" type="text/javascript">
-	<h3>Add OnTact</h3>
-		<form>
-			<input id="find-username" type="text" placeholder="enter a username">
-			<input id="find-connection-bttn" type="submit" value="connect">
-		</form>
+	<div id="add-connection-div">
+		<h2 class="form-h2">Add OnTact</h2>
+			<form>
+				<input id="find-username" class="input-text" type="text" placeholder="enter an OnTact username"><br>
+				<input id="find-connection-bttn" class="input-submit" type="submit" value="connect">
+			</form>
+	</div>
 </script>
 
 
