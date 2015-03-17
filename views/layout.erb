@@ -1,11 +1,21 @@
 <html>
 <head>
 	<title>OnTact</title>
-	
-	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+	<!-- STYLESHEETS -->
 
+	<!-- css reset -->
+	<!-- <link rel="stylesheet" type="text/css" href="/css/reset.css"> -->
+	
+	<!-- slick -->
 	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
-	 
+
+	<!-- google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700|Oswald:400,300|Roboto' rel='stylesheet' type='text/css'>
+
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+	
+	<!-- JAVASCRIPT FILES -->
 	<!--  react.js  -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js"></script>
   
@@ -23,20 +33,24 @@
 </head>
 <body>
 	<nav>
-		<h1>OnTact</h1> 
+		<h1 id="logo"><a href="/">OnTact</a></h1> 
 		<% if session[:current_user] %>
-			<form action="/sessions" method="post">
+			<form class="nav-form" action="/sessions" method="post">
 				<input type="hidden" name="_method" value="delete">
 				<input type="submit" value="Log out">
 			</form>
 		<% else %>
-			<form action="/login" method="get">
+			<form class="nav-form" action="/login" method="get">
 				<input type="submit" value="Log in">
 			</form>
 		<% end %>
-	</nav>
+	</nav class="clearfix">
+
+	<section id="main" class="clearfix">
 	
-	<%= yield %>
+		<%= yield %>
+
+	</section>
 
 	<footer>
 		<p>OnTact &copy; 2015</p>

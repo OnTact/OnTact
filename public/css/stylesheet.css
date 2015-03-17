@@ -1,15 +1,133 @@
-#dash-nav {
+/*GOOGLE FONTS:*/
+/*font-family: 'Lato', sans-serif;*/
+/*font-family: 'Oswald', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+
+/*BEGIN UTILITIES*/
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  /*font: inherit;*/	
+}
+
+body {
+	background: #eeeeee;
+	font-family: 'Lato', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.clearfix:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+/*BEGIN NAV*/
+
+nav { 
+	width: 100%;
+	padding: 20 10 25 25;
+	margin-bottom: 20px;
+	background-color: #0092B6;
+}
+
+#logo {
+	float: left;
+}
+
+.nav-form{
+	float: left;
+	right: 25;
+	/*top: 25;*/
+	position: absolute;
+}
+
+footer {
+	position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+footer p {
+	text-align: center;
+	margin: 0 auto;
+	padding: 10 10 10 10;
+	background-color: #666;
+}
+
+/*MAIN*/
+
+#main {
+	clear: both;
+	float: none;
+}
+
+
+/*SLICK-TRACK*/
+/*.slick-track {
+	width: 90%;
+	max-height: 500px;
+}*/
+
+/*FORMS*/
+.form-h2{
+	margin: 0 auto;
+	text-align: center;
+	margin: 10 10 10 10;
+}
+
+.input-text {
+	width: 300px;
 	border: 1px solid;
+	margin: 10 10 10 10;
+	padding: 10 5 10 5;
+
+	margin: 0 auto;
+	display: block;		
+}
+
+.input-submit{
+	width: 300px;
+	border: 1px solid;
+	margin: 10 10 10 10;
+	padding: 10 5 10 5;
+
+	margin: 0 auto;
+	display: block;		
+}
+
+/*LOGIN PAGE*/
+#div-login{
 	width: 600px;
 	margin: 0 auto;
 }
 
-.dash-nav-div{
+/*DASHBOARD*/
+
+#dash-nav {
+	border: 1px solid;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.dash-nav-div {
 	display: inline-block;
 	padding: 10px;
-	border: 1px dashed;
-	margin: 10 10 10 10;
+	/*border: 1px dashed;*/
+	margin: 5 50 10 5;
 	text-align: center;
+}
+
+.dash-nav-img {
+	max-width: 65px;
+	/*margin:;*/
 }
 
 #connection-card {
