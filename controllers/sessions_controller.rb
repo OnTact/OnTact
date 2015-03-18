@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 
   # destroy session (log out)
 	delete '/' do
-    session[:current_user] = nil
+    session.destroy
     redirect '/'
   end
 
