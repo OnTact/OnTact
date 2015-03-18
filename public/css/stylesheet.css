@@ -290,6 +290,19 @@ footer p {
 	margin: 0 auto;
 }
 
+/* AVATAR SELECTORS */
+
+/*select#avatar option[value="Panda"]{
+	background-image:url(PandaAvatar.jpg);
+}
+select#avatar option[value="Monkey"]{
+	background-image:url(MonkeyAvatar.jpg);
+}
+select#avatar option[value="Leprechaun"]{
+	background-image:url(LepAvatar.jpg);
+}*/
+
+
 /* SLICK Slider */
 .slick-slider
 {

@@ -35,11 +35,17 @@
 	<nav>
 		<h1 id="logo"><a href="/">OnTact</a></h1> 
 		<% if session[:current_user] %>
+			<img src="<%= @user.image %>"
 			<form class="nav-form" action="/sessions" method="post">
 				<input class="nav-form-bttn" type="hidden" name="_method" value="delete">
 				<input class="nav-form-bttn" type="submit" value="Log out">
 			</form>
 		<% else %>
+			<form id="email-input">
+				<label>Interested in signing up for our beta? Submit your email address!
+					<input type="email" name="user_email" required placeholder="Enter a valid email address">
+				</label>
+			</form>
 			<form class="nav-form" action="/login" method="get">
 				<input class="nav-form-bttn" type="submit" value="Log in">
 			</form>
