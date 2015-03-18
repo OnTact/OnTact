@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 
   # destroy session (log out)
 	delete '/' do
-    reset session
+    session.destroy
     redirect '/'
   end
 
