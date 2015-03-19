@@ -44,12 +44,13 @@ nav {
 	font-size: 40; 
 	font-color: #f8f7f2;
 
+	/*padding-bottom: 30px;*/
 	float: left;
 }
 
 #logo a{
 	color: #f8f7f2;
-	margin-right: 100px;
+
 }
 
 .nav-form{
@@ -72,17 +73,30 @@ nav {
 
 }
 
-.beta-signup-form {
-/*	float: left;
-	top: 25;
-	position: absolute;*/
+#beta-signup-form {
+	float: left;
+	top: 20;
+	left: 30%;
+	position: absolute;
 }
 
+.nav-email-input-label{
+	color: #f8f7f2;
+	font-size: 18;
+	margin-right: 10px;
+	/*padding-bottom: 10px;*/
+}
 
+.nav-email-input-text {
+	width: 300px;
+	border: 1px solid;
+	border-color: #4d4d4d;
+	padding: 10 5 10 5;
+}
 /*FOOTER*/
 
 footer {
-	position: absolute;
+	position: fixed;
     width: 100%;
     bottom: 0px;
 }
