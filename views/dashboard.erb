@@ -169,10 +169,24 @@
 <script id="add-connection-template" type="text/javascript">
 	<div id="add-connection-div">
 		<h2 class="form-h2">Add OnTact</h2>
-			<form>
-				<input id="find-username" class="input-text" type="text" placeholder="enter an OnTact username"><br>
-				<input id="find-connection-bttn" class="input-submit" type="submit" value="connect">
-			</form>
+		<h3>Know someone OnTact? Add him or her as a connection!</h3>
+		<form>
+			<input id="find-username" class="input-text" type="text" placeholder="enter an OnTact username"><br>
+			<input id="find-connection-bttn" class="input-submit" type="submit" value="connect">
+		</form>
+	</div>
+	<div id="invite-div">
+		<h3>Invite someone to join OnTact!</h3>
+		<p>Input an email address, and we will take care of the rest.</p>
+		<form id="invite-form">
+			<label>Name:
+				<input id="invite-name" type="text" required>
+			</label>
+			<label>Email address:
+				<input id="invite-email" type="email" required>
+			</label>
+			<button>Send Invite</button>
+		</form>
 	</div>
 </script>
 
