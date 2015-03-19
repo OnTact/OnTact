@@ -85,6 +85,7 @@ $(function(){
 
 	// ADD CONNECTIONS general function
 	function addConnection(){
+		
 		// render add contact form
 		var addTemplate = $("#add-connection-template");
 		loadDom(addTemplate);
