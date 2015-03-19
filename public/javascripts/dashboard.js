@@ -87,6 +87,22 @@ $(function(){
 		var addTemplate = $("#add-connection-template");
 		loadDom(addTemplate);
 
+		// create email invite
+		$("#invite-form").on("submit", function(e){
+			e.preventDefault();
+			var name = $("#invite-name").val()
+			var email = $("#invite-email").val()
+			$.ajax({
+				url: "/leads",
+				type: "POST",
+				data: {name: name, email: email}
+			}).done(function(data){
+				alert(data);
+				$("#invite-name").val("");
+				$("#invite-email").val("");
+			})
+		});
+
 		// render send-request-template
 		$("#find-connection-bttn").on('click', function(e){
 			e.preventDefault();

@@ -27,12 +27,14 @@ class ApplicationController < Sinatra::Base
 
   # sends invite to potential OnTact member
   post '/leads' do
+    content_type :text
     id = session[:current_user]
     email = params[:email]
+    name = params[:name]
     client = SendGrid::Client.new(api_user: 'gretchenziegler', api_key: '8DinosaurCupcakes')
     client.send(SendGrid::Mail.new(to: email, from: 'gretchenziegler@gmail.com', subject: 'Join the OnTact Community!', text: "OnTact: Contacts for the Digital World. Manage your contacts in one fun, efficient location. Your contacts update your address book so you don't have to. Join OnTact today!", html: "<h1>OnTact: Contact Management for the Digital World.</h1><p>Manage your contacts in one fun, efficient location. Your contacts update your address book so you don't have to.</p><h2><a href='#'>Join OnTact today!</a></h2>"))
 
-    redirect "/users/#{id}"
+    "Thanks! You have successfully invited #{name} to join OnTact!"
   end
 
   post '/finduser' do

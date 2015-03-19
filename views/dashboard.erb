@@ -178,9 +178,12 @@
 	<div id="invite-div">
 		<h3>Invite someone to join OnTact!</h3>
 		<p>Input an email address, and we will take care of the rest.</p>
-		<form method="POST" action="/leads">
+		<form id="invite-form">
+			<label>Name:
+				<input id="invite-name" type="text" required>
+			</label>
 			<label>Email address:
-				<input type="email" name="email" required>
+				<input id="invite-email" type="email" required>
 			</label>
 			<button>Send Invite</button>
 		</form>
