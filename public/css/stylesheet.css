@@ -49,6 +49,7 @@ nav {
 
 #logo a{
 	color: #f8f7f2;
+	margin-right: 100px;
 }
 
 .nav-form{
@@ -70,6 +71,13 @@ nav {
 .nav-form-bttn:hover {
 
 }
+
+.beta-signup-form {
+/*	float: left;
+	top: 25;
+	position: absolute;*/
+}
+
 
 /*FOOTER*/
 
@@ -213,7 +221,8 @@ footer p {
 	margin: 0 auto;
 }
 
-.srch-rslt-header h3 {
+.srch-rslt-header {
+	display: block;
 	margin: 0 auto;
 	text-align: center;
 	margin: 10 10 10 10;
@@ -227,6 +236,8 @@ footer p {
 
 	background-color: #f8f7f2;
 	border: 1px solid black;
+
+	margin: 0 auto;
 }
 
 .srch-rslt-preview p{
@@ -234,7 +245,7 @@ footer p {
 }
 
 #add-search-result-template {
-	width: 600px;
+	width: 400px;
 	margin: 0 auto;
 }
 

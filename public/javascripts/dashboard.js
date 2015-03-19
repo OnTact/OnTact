@@ -112,7 +112,7 @@ $(function(){
 					var $resultPreviewCard = $('<div class="srch-rslt-preview">')
 					$searchResultTemplate.append($resultPreviewCard);
 				
-					var $h3 = $('<h3 class="srch-rslt-Name">').text(parsedConnection.f_name + " " +parsedConnection.l_name);
+					var $h3 = $('<h3 class="srch-rslt-header">').text(parsedConnection.f_name + " " +parsedConnection.l_name);
 					var $p1 = $('<p>').text(parsedConnection.position + " | " + parsedConnection.company);
 					var $p2 = $('<p>').text(parsedConnection.username);
 
@@ -127,9 +127,9 @@ $(function(){
 
 					var $connectionTypePro = $('<p>Professional</p><input type="radio" name="connection_type" value="professional" checked><br>')
 					var $connectTypePer = $('<p>Personal</p><input type="radio" name="connection_type" value="personal"><br>')
-					var $connectInfo = $('<input type="text" name="additional_info" required placeholder="How did we meet?"><br>')
+					var $connectInfo = $('<input class="input-text" type="text" name="additional_info" required placeholder="How did we meet?"><br>')
 					var $hiddenInput = $('<input type="hidden" name="receiver_id" value='+ parsedConnection.id +'>')
-					var $connectSubmit = $('<input type="submit" value="Request To Connect">')
+					var $connectSubmit = $('<input class="input-submit"type="submit" value="Request To Connect">')
 
 					$connectForm.append($connectionTypePro);
 					$connectForm.append($connectTypePer);
