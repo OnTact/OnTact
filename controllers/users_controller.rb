@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   # only take params that exist within User model
   def user_params(params)
     params.slice(*User.column_names)
@@ -18,8 +17,15 @@ class UsersController < ApplicationController
   get '/:id' do
     id = session[:current_user]
     @user = User.find(id)
-    connections = Connection.where("receiver_id = #{id} or initiator_id = #{id}")
+
+    connections = Connection.where("receiver_id = #{id} OR initiator_id = #{id}")
     @connected_users = @user.connected_users(connections, id)
+
+
+    #get's a user's pending requests
+    @requests = Connection.where("pending = true and receiver_id = #{id}")
+    @pending_connections = @user.connected_users(@requests, id)
+
     erb :dashboard
   end
 

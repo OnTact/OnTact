@@ -69,8 +69,24 @@ nav {
 	padding: 10 5 10 5;
 }
 
+#nav-sign-up {
+	float: left;
+	right: 100;
+	top: 20;
+	position: absolute;
+}
+
 .nav-form-bttn:hover {
 
+}
+
+.nav-image{
+	float: left;
+	/*top: 20;*/
+	left: 47%;
+	position: absolute;
+
+	height: 50px;
 }
 
 #beta-signup-form {
@@ -229,6 +245,34 @@ footer p {
 	margin-top: 3%;
 }
 
+/*NOTIFICATIONS*/
+
+.notifications-title-div {
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	/*width: 100;*/
+}
+
+.request-card-view {
+	border: 1px solid;
+	padding: 5;
+	width: 300px;
+	height: 200px;
+
+	background-color: #ffffff;
+	display: inline-block;
+
+	margin: 0 auto;
+
+	margin-right: 10;
+	margin-bottom: 20;
+}
+
+.request-image-div {
+
+}
+
 /*SEARCH RESULTS*/
 #search-result-template {
 	width: 600px;
@@ -260,6 +304,26 @@ footer p {
 
 #add-search-result-template {
 	width: 400px;
+	margin: 0 auto;
+}
+
+#ivite-to-button-div {
+	margin: 0 auto;
+	margin-top: 20;
+
+	text-align: center;
+}
+
+#ivite-to-button-div-txt {
+	width: 290px;
+	margin:  10 10 10;
+	padding: 10 5 10 5;
+
+	color: #f8f7f2;
+	font-size: 16;
+	background-color: #0092B6;
+
+	text-align: center;
 	margin: 0 auto;
 }
 
@@ -308,6 +372,11 @@ footer p {
 	border: 1px solid;
 	border-color: #4d4d4d;
 }
+
+.card-image {
+	float: right;
+}
+
 /*EDIT CURRENT USER*/
 
 #profile-edit {
