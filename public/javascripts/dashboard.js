@@ -49,7 +49,7 @@ $(function(){
 						url: '/finduser',
 						type: 'POST',
 						data: {username: username}
-						}).done(function(data){
+					}).done(function(data){
 						var userParsed = JSON.parse(data);
 						// RENDER SEARCH RESULT PAGE:
 						$container.empty();
@@ -72,8 +72,6 @@ $(function(){
 		};
 	});	
 
-
-
 	// VIEW NOTIFICATIONS
 		// render notifications
 		$("#notifications-bttn").on('click', function(){
@@ -81,7 +79,26 @@ $(function(){
 			loadDom(notificationsTemplate);
 		});	
 
+	// REJECT
+		$('body').on('click', '#reject', function(){
+			console.log('clicked reject');
+		});
 
+		//NOTES FO FINISHING THIS
+		 // use ajax patch to change the is_connected column
+		// to false and pending to false.  
+		// ON success $(.card).remove or something similar
+
+	// ACCEPT
+		$('body').on('click', '#accept', function(){
+			console.log('clicked accept');
+		});
+
+	// INVITE CONNECTION
+		$('body').on('click', "#ivite-to-button-div", function(){
+			var inviteTemplate = $("#invite-template");
+			loadDom(inviteTemplate);
+		});	
 
 	// ADD CONNECTIONS general function
 	function addConnection(){

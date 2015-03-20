@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
     self.password_digest = @password
   end
 
+
   def connected_users(connections, user_id)
     users = []
     connections.each do |connection|

@@ -163,19 +163,54 @@
 	</div>
 </script>
 
+<!-- VIEW Requests Template -->
+
+<script id="notifications-view-template" type="text/javascript">
+	
+	<div class="notifications-title-div">
+		<h3 class="notifications-title">Requests to Connect</h3>
+	</div>
+
+	<div class="request-card-view-div">
+		<% @pending_connections.each do |request| %>
+			<div class="request-card-view">
+				<div class="request-image-div"><img class="request-image" src="<%= request.image %>"></div>
+				<h3><%= request.f_name %> <%= request.l_name %></h3>
+				<p><%=request.position%> | <%= request.company %></p>
+				<div id="accept">
+					<p>accept</p>
+				</div>
+
+				<div id="reject">
+					<p>reject</p>
+				</div>
+
+			</div>
+		<% end %>
+	</div>
+
+</script>
+
+
 
 <!-- ADD Connection Template -->
 
 <script id="add-connection-template" type="text/javascript">
 	<div id="add-connection-div">
 		<h2 class="form-h2">Add OnTact</h2>
-		<h3>Know someone OnTact? Add him or her as a connection!</h3>
 		<form>
 			<input id="find-username" class="input-text" type="text" placeholder="enter an OnTact username"><br>
 			<input id="find-connection-bttn" class="input-submit" type="submit" value="connect">
 		</form>
 	</div>
-	<div id="invite-div">
+	<div id="ivite-to-button-div">
+		<p id="ivite-to-button-div-txt">Invite to OnTact</p>
+	</div>
+</script>
+
+<!-- INVITE Template -->
+<script id="invite-template" type="text/javascript">
+	<div id="invite-page-div">
 		<h3>Invite someone to join OnTact!</h3>
 		<p>Input an email address, and we will take care of the rest.</p>
 		<form id="invite-form">
