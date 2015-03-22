@@ -4,17 +4,6 @@ class ConnectionsController < ApplicationController
     params.slice(*Connection.column_names)
   end
 
-  # get all connections from server and send as json string
-  ## needs to be changed to reflect where receiver id or initiator id == current user id
-  get "/" do
-    Connection.all.to_json
-  end
-
-  #p get individual connection information and send as json string
-  get "/:id" do
-    connection = Connection.find(params[:id]).to_json
-  end
-
   # create a connection after initiator adds; is_connected = false and pending = true
   post '/' do
     receiver_id = params[:receiver_id]
