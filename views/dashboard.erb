@@ -211,16 +211,11 @@
 <!-- INVITE Template -->
 <script id="invite-template" type="text/javascript">
 	<div id="invite-page-div">
-		<h3>Invite someone to join OnTact!</h3>
-		<p>Input an email address, and we will take care of the rest.</p>
+		<h3 class="form-h2">Invite someone to join OnTact!</h3>
 		<form id="invite-form">
-			<label>Name:
-				<input id="invite-name" type="text" required>
-			</label>
-			<label>Email address:
-				<input id="invite-email" type="email" required>
-			</label>
-			<button>Send Invite</button>
+			<input class="input-text" id="invite-name" type="text" placeholder="first name" required><br>
+			<input class="input-text" id="invite-email" type="email" placeholder="e-mail address" required><br>
+			<button class="input-submit">Send Invite</button><br>
 		</form>
 	</div>
 </script>

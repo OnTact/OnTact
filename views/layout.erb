@@ -33,7 +33,7 @@
 </head>
 <body>
 	<nav>
-		<h1 id="logo"><a href="/">OnTact</a></h1> 
+		<div id="logo"><a href="/"><img id="logo-img" src="/images/ontact-orange.png"></a></div> 
 		<% if session[:current_user] %>
 			<% @user ||= User.find(session[:current_user]) %>
 			<img class="nav-image" src="<%= @user.image %>">
@@ -55,9 +55,9 @@
 
 	</section>
 
-<!-- 	<footer class="clearfix">
-		<p>OnTact &copy; 2015</p>
-	</footer> -->
+	<footer class="clearfix">
+		<p>ontact &copy; 2015</p>
+	</footer>
 
 </body>
 </html>

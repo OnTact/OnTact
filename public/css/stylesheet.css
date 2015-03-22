@@ -36,7 +36,7 @@ nav {
 	width: 100%;
 	padding: 10 10 60 25;
 	margin-bottom: 20px;
-	background-color: #0092B6;
+	background-color: #ffffff;
 }
 
 #logo {
@@ -48,9 +48,8 @@ nav {
 	float: left;
 }
 
-#logo a{
-	color: #f8f7f2;
-
+#logo-img {
+	height: 65px;
 }
 
 .nav-form{
@@ -61,9 +60,10 @@ nav {
 }
 
 .nav-form-bttn {
-	color: #f8f7f2;
+	color: #eb5b23;
 	font-size: 16;
-	background-color: #0092B6;
+	/*background-color: #eeeeee;*/
+	background-color: #ffffff;
 
 	border-radius: 10%;
 	padding: 10 5 10 5;
@@ -121,10 +121,10 @@ footer p {
 	text-align: center;
 	margin: 0 auto;
 	padding: 10 10 10 10;
-	background-color: #666;
+	background-color: #ffffff;
 
 	font-family: 'Roboto', sans-serif;
-	color: #f8f7f2; 
+	color: #666; 
 }
 
 /*MAIN*/
@@ -151,12 +151,15 @@ footer p {
 .input-text {
 	width: 300px;
 	border: 1px solid;
-	border-color: #4d4d4d;
+	/*border-color: #4d4d4d;*/
+	border-color: #ffffff;
 	margin: 10 10 10 10;
 	padding: 10 5 10 5;
 
 	margin: 0 auto;
-	display: block;		
+	display: block;
+
+	font-size: 20px;		
 }
 
 .input-text-edit{
@@ -181,7 +184,7 @@ footer p {
 
 	color: #f8f7f2;
 	font-size: 16;
-	background-color: #0092B6;
+	background-color: #666;
 
 	margin: 0 auto;
 	display: block;		
@@ -330,7 +333,7 @@ footer p {
 
 	color: #f8f7f2;
 	font-size: 16;
-	background-color: #0092B6;
+	background-color: #eb5b23;
 
 	text-align: center;
 	margin: 0 auto;
@@ -376,7 +379,7 @@ footer p {
 
 	color: #f8f7f2;
 	font-size: 16;
-	background-color: #0092B6;
+	background-color: #666;
 
 	border: 1px solid;
 	border-color: #4d4d4d;
