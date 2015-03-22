@@ -95,7 +95,7 @@ $(function(){
 		});
 
 	// INVITE CONNECTION
-		$('body').on('click', "#ivite-to-button-div", function(){
+		$('body').on('click', "#invite-to-button-div", function(){
 			var inviteTemplate = $("#invite-template");
 			loadDom(inviteTemplate);
 		});	
