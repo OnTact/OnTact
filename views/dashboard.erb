@@ -172,11 +172,11 @@
 	</div>
 
 	<div class="request-card-view-div">
-		<% @pending_connections.each do |request| %>
-			<div class="request-card-view">
-				<div class="request-image-div"><img class="request-image" src="<%= request.image %>"></div>
-				<h3><%= request.f_name %> <%= request.l_name %></h3>
-				<p><%=request.position%> | <%= request.company %></p>
+		<% @requests.each do |request| %>
+			<div class="request-card-view" id=<%= request.id %>>
+				<div class="request-image-div"><img class="request-image" src="<%= request.initiator.image %>"></div>
+				<h3><%= request.initiator.f_name %> <%= request.initiator.l_name %></h3>
+				<p><%=request.initiator.position%> | <%= request.initiator.company %></p>
 				<div id="accept">
 					<p>accept</p>
 				</div>

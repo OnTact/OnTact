@@ -7,6 +7,19 @@ function loadDom(template){
 	$container.append(template.html());
 }
 
+// alert for accepting or rejecting notifications
+
+function notificationAlert(data){
+	var parsed = JSON.parse(data);
+	if (parsed.is_connected){
+		alert("Request Accepted")
+	} else {
+		alert("Request Hidden")
+	}
+	var cardView = $("#" + parsed.id)
+	cardView.remove();
+}
+
 // window onload function
 $(function(){	
 
@@ -82,16 +95,27 @@ $(function(){
 	// REJECT
 		$('body').on('click', '#reject', function(){
 			console.log('clicked reject');
+			var id = this.parentElement.id;
+			$.ajax({
+				url: "/connections/" + id,
+				type: "PUT",
+				data: ({pending: false, is_connected: false})
+			}).done(function(data){
+				notificationAlert(data);
+			})
 		});
-
-		//NOTES FO FINISHING THIS
-		 // use ajax patch to change the is_connected column
-		// to false and pending to false.  
-		// ON success $(.card).remove or something similar
-
+		
 	// ACCEPT
 		$('body').on('click', '#accept', function(){
 			console.log('clicked accept');
+			var id = this.parentElement.id;
+			$.ajax({
+				url: "/connections/" + id,
+				type: "PUT",
+				data: ({pending: false, is_connected: true})
+			}).done(function(data){
+				notificationAlert(data);
+			})
 		});
 
 	// INVITE CONNECTION
