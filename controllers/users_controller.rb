@@ -9,7 +9,11 @@ class UsersController < ApplicationController
     user = User.new(params[:user])
     user.username = params[:username]
     user.password = params[:password]
+    user.f_name = params[:f_name]
+    user.l_name = params[:l_name]
+    user.image = "./images/PandaAvatar.jpg"
     user.save!
+
     redirect '/'
   end
 
@@ -18,13 +22,12 @@ class UsersController < ApplicationController
     id = session[:current_user]
     @user = User.find(id)
 
-    connections = Connection.where("receiver_id = #{id} OR initiator_id = #{id}")
+    connections = Connection.where("receiver_id = #{id} OR initiator_id = #{id} and is_connected = true")
+
     @connected_users = @user.connected_users(connections, id)
 
-
-    #get's a user's pending requests
+    #gets a user's pending requests
     @requests = Connection.where("pending = true and receiver_id = #{id}")
-    @pending_connections = @user.connected_users(@requests, id)
 
     erb :dashboard
   end

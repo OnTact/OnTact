@@ -41,21 +41,5 @@ class ApplicationController < Sinatra::Base
     User.find_by(username: params[:username]).to_json
   end
 
-
-# 
-  # get '/notifications' do
-  #   id = session[:current_user] 
-  #   @user = User.find(id)
-  #   requests = Connection.where("pending = false and receiver_id = #{id}")
-  #   @pending_connections = @user.connected_users(requests, id)
-
-  #   Pry.start(binding)
-
-  #   # note to self, convert @pending_connections to json and return that instead
-
-  #   # erb :dashboard
-  # end
-
-
 end
 

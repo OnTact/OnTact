@@ -1,14 +1,7 @@
 class ConnectionsController < ApplicationController
   
-  # get all connections from server and send as json string
-  ## needs to be changed to reflect where receiver id or initiator id == current user id
-  get "/" do
-    Connection.all.to_json
-  end
-
-  # get individual connection information and send as json string
-  get "/:id" do
-    connection = Connection.find(params[:id]).to_json
+  def connection_params(params)
+    params.slice(*Connection.column_names)
   end
 
   # create a connection after initiator adds; is_connected = false and pending = true
@@ -32,7 +25,11 @@ class ConnectionsController < ApplicationController
 
   # update a connection if a receiver accepts or rejects connection, or if either receiver or initiator "deletes" connection (is_connected = false)
   put '/:id' do
+    content_type :text
+    connection = Connection.find(params[:id])
+    connection.update(connection_params(params))
 
+    connection.to_json
   end
 
 end
