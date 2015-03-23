@@ -2,6 +2,8 @@ console.log('linked');
 
 var $container = $('#dash-content')
 
+// load the dashboard with passed template
+
 function loadDom(template){
 	$container.empty();
 	$container.append(template.html());
@@ -37,7 +39,7 @@ $(function(){
 
 
 
-// VIEW CONNECTIONS
+	// VIEW CONNECTIONS
 	// render all contacts
 	$("#connections-bttn").on('click', function(){
 		var connectionsTemplate = $("#connections-all-template");
@@ -54,7 +56,7 @@ $(function(){
 
 	  // show individual user info when clicking on slide
 		var slides = $(".slick-slide");
-		for (i = 0; i < slides.length; i ++){
+		for (var i = 0; i < slides.length; i++){
 			$(slides[i]).on("click", function(){
 				if (this.id){
 					var username = this.id
@@ -65,20 +67,21 @@ $(function(){
 					}).done(function(data){
 						var userParsed = JSON.parse(data);
 						// RENDER SEARCH RESULT PAGE:
-						$container.empty();
 
 						// search result template
 						var $template = $('<div id="view-connection-template">')
-						$container.append($template);
-							// append header "connect with >username?"
+
+						// append user information
 						
-						var $h3 = $('<h3">').text(userParsed.f_name + " " +userParsed.l_name);
+						var $h3 = $('<h3>').text(userParsed.f_name + " " + userParsed.l_name);
 						var $p1 = $('<p>').text(userParsed.position + " | " + userParsed.company);
 						var $p2 = $('<p>').text(userParsed.username);
 
 						$template.append($h3);
 						$template.append($p1);
 						$template.append($p2);
+						
+						loadDom(template);
 					});
 				};
 			});
@@ -104,7 +107,7 @@ $(function(){
 				notificationAlert(data);
 			})
 		});
-		
+
 	// ACCEPT
 		$('body').on('click', '#accept', function(){
 			console.log('clicked accept');
