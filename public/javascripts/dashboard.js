@@ -16,7 +16,7 @@ function notificationAlert(data){
 	} else {
 		alert("Request Hidden")
 	}
-	var cardView = $("#" + parsed.id)
+	var cardView = $("#" + parsed.id);
 	cardView.remove();
 }
 
@@ -26,6 +26,7 @@ $(function(){
 	// render profile
 	$("#profile-bttn").on('click', function(){
 		var profileTemplate = $("#profile-view-template");
+		console.log('profile clicked');
 		loadDom(profileTemplate);
 
 		// render profile edit form
@@ -41,7 +42,7 @@ $(function(){
 	// render all contacts
 	$("#connections-bttn").on('click', function(){
 		var connectionsTemplate = $("#connections-all-template");
-		console.log('connections clicked')
+		console.log('connections clicked');
 		loadDom(connectionsTemplate);
 	
 	// scroll function
@@ -89,6 +90,7 @@ $(function(){
 		// render notifications
 		$("#notifications-bttn").on('click', function(){
 			var notificationsTemplate = $("#notifications-view-template");
+			console.log('notifications clicked');
 			loadDom(notificationsTemplate);
 		});	
 
