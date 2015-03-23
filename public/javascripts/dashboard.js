@@ -44,7 +44,7 @@ $(function(){
 		console.log('connections clicked')
 		loadDom(connectionsTemplate);
 	
-		// scroll function
+	// scroll function
 	  $("#scrolladex").slick({
 	  	slidesToShow: 2,
 	  	slidesToScroll: 1,

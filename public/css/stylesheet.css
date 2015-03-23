@@ -30,6 +30,11 @@ a {
   content: "";
 }
 
+.clear {
+	clear: both;
+	float: none;
+}
+
 /*BEGIN NAV*/
 
 nav { 
@@ -245,11 +250,11 @@ footer p {
 	/*margin:;*/
 }
 
-#connection-card {
+/*#connection-card {
 	border: 1px solid;
 	width: 200px;
 	height: 200px;
-}
+}*/
 
 #container {
 	width: 90%;
@@ -267,22 +272,35 @@ footer p {
 }
 
 .request-card-view {
-	border: 1px solid;
-	padding: 5;
-	width: 300px;
-	height: 200px;
-
-	background-color: #ffffff;
 	display: inline-block;
-
 	margin: 0 auto;
 
-	margin-right: 10;
-	margin-bottom: 20;
+	border: 1px solid;
+	width: 350px;
+	max-height: 200px;
+	min-height: 200px;
+	margin: 10 10 10 10;
+	padding: 10 10 10 10;
+
+	background-color: #F8ECC2;
+	background-image: url('/images/cardassets/cardboard-texture-600x400.jpg');
+	background-position: center;
 }
 
 .request-image-div {
 
+}
+
+.accept{
+	float: left;
+	color: #fff;
+	bottom: 1;
+}
+
+.reject{
+	float: right;
+	color: #fff;
+	bottom: 1;
 }
 
 /*SEARCH RESULTS*/
@@ -385,8 +403,9 @@ footer p {
 	border-color: #4d4d4d;
 }
 
-.card-image {
-	float: right;
+.edit-avatar-divs {
+	float: left;
+	display: block;
 }
 
 /*EDIT CURRENT USER*/
@@ -408,6 +427,74 @@ select#avatar option[value="Leprechaun"]{
 	background-image:url(LepAvatar.jpg);
 }*/
 
+
+/*SCROLLADEX*/
+
+#scrolladex{
+	text-align: center;
+}
+
+.connection-card {
+	border: 1px solid;
+	background-color: #F8ECC2;
+	background-image: url('/images/cardassets/cardboard-texture-600x400.jpg');
+	background-position: center;
+
+	width: 300px;
+	max-height: 250px;
+	margin: 10 10 10 10;
+	padding: 10 10 10 10;
+
+}
+
+.card-image-div-scrolladex {
+	display: block;
+	margin: 0 auto;
+}
+
+.card-image-scrolladex{
+	display: block;
+	margin: 0 auto;
+	max-height: 100px;
+}
+
+.card-info-scrolladex {
+}
+
+.headline-scrolladex{
+	color: #fff;
+	font-weight: bold;
+}
+
+.slick-prev {
+	width: 150px;
+	padding: 10 5 10 5;
+
+	border: 1px solid;
+	border-color: #4d4d4d;
+
+	color: #f8f7f2;
+	font-size: 16;
+	background-color: #666;
+
+	margin: 0 auto;
+	margin:  10 10 10 10;		
+}
+
+.slick-next{
+	width: 150px;
+	padding: 10 5 10 5;
+
+	border: 1px solid;
+	border-color: #4d4d4d;
+
+	color: #f8f7f2;
+	font-size: 16;
+	background-color: #666;
+
+	margin: 0 auto;
+	margin:  10 10 10 10;	
+}
 
 /* SLICK Slider */
 .slick-slider

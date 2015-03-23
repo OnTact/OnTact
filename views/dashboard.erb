@@ -1,8 +1,8 @@
 <section id="dash-nav">
-	<div id="profile-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/Profile.jpg"></div>
-	<div id="connections-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/Connections.jpg"></div>
-	<div id="notifications-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/Notifications.jpg"></div>
-	<div id="add-connection-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/Add_Connection.jpg"></div>
+	<div id="profile-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/dashnav/View_Profile.png"></div>
+	<div id="connections-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/dashnav/View_Connections.png"></div>
+	<div id="notifications-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/dashnav/View_Notifications.png"></div>
+	<div id="add-connection-bttn" class="dash-nav-div"><img class="dash-nav-img" src="/images/dashnav/Add_OnTact.png"></div>
 	<hr>
 </section>
 
@@ -69,7 +69,7 @@
 
 	<br>
 
-	<div id="profile-edit-button">Edit<div>
+	<div id="profile-edit-button">Edit<div><br><br><br>
 </script>
 
 <!-- profile-edit-template -->
@@ -85,58 +85,107 @@
 			<label>
 			<br>
 			<label>Last Name
-				<input class="input-text-edit" type="text" name="l_name" value=<%= @user.l_name %>>
+				<input class="input-text" type="text" name="l_name" value=<%= @user.l_name %>>
 			<label>
 			<br>
 			<label>Headline
-				<input class="input-text-edit" type="text" name="headline" value=<%= @user.headline %>>
+				<input class="input-text" type="text" name="headline" value=<%= @user.headline %>>
 			<label>
 			<br>
-			<label>Avatar
-				<br>
-				<img src="/images/PandaAvatar.jpg">
-				<br>
-				<input type="radio" name="image" value="/images/PandaAvatar.jpg">Panda
-				<br>
-				<img src="/images/MonkeyAvatar.jpg">
-				<br>
-				<input type="radio" name="image" value="/images/MonkeyAvatar.jpg">Monkey
-				<br>
-				<img src="/images/LepAvatar.jpg">
-				<br>
-				<input type="radio" name="image" value="/images/LepAvatar.jpg">Leprechaun
-				<br>
-			</label>
+			<label>Avatar</label>
+				<div class="edit-avatar-divs">
+					<img src="/images/avatars/BaoBao.png">
+					<br>
+					<input type="radio" name="image" value="/images/avatars/BaoBao.png">BaoBao
+					<br>
+				<div>
+
+				<div class="edit-avatar-divs">
+					<img src="/images/avatars/Benedict.png">
+					<br>
+					<input type="radio" name="image" value="/images/avatars/Benedict.png">Benedict
+					<br>
+				<div>
+
+				<div class="edit-avatar-divs">
+					<img src="/images/avatars/Blitzen.png">
+					<br>
+					<input type="radio" name="image" value="/images/avatars/Blitzen.png">Blitzen
+					<br>
+				<div>
+
+				<div class="edit-avatar-divs">
+					<img src="/images/avatars/Henry.png">
+					<br>
+					<input type="radio" name="image" value="/images/avatars/Henry.png">Henry
+					<br>
+				<div>
+
+				<div class="edit-avatar-divs">
+					<img src="/images/avatars/Hubert.png">
+					<br>
+					<input type="radio" name="image" value="/images/avatars/Hubert.png">Hubert
+					<br>
+				<div>
+
+				<div class="edit-avatar-divs">
+					<img src="/images/avatars/Petra.png">
+					<br>
+					<input type="radio" name="image" value="/images/avatars/Petra.png">Petra
+					<br>
+				<div>
+
+				<div class="edit-avatar-divs">
+					<img src="/images/avatars/Stefon.png">
+					<br>
+					<input type="radio" name="image" value="/images/avatars/Stefon.png">Stefon
+					<br>
+				<div>
+
+				<div class="edit-avatar-divs">
+					<img src="/images/avatars/Thaddeus.png">
+					<br>
+					<input type="radio" name="image" value="/images/avatars/Thaddeus.png">Thaddeus
+					<br>
+				<div>
+
+				<div class="edit-avatar-divs">
+					<img src="/images/avatars/Thomas.png">
+					<br>
+					<input type="radio" name="image" value="/images/avatars/Thomas.png">Thomas
+					<br>
+				<div>
+
 			<br>
 			<label>Personal Phone
-				<input class="input-text-edit" type="text" name="personal_phone" value=<%= @user.personal_phone %>>
+				<input class="input-text" type="text" name="personal_phone" value=<%= @user.personal_phone %>>
 			<label>
 			<br>
 			<label>Work Phone
-				<input class="input-text-edit" type="text" name="professional_phone" value=<%= @user.professional_phone %>>
+				<input class="input-text" type="text" name="professional_phone" value=<%= @user.professional_phone %>>
 			<label>
 			<br>
 			<label>Personal Email
-				<input class="input-text-edit" type="text" name="personal_email" value=<%= @user.personal_email %>>
+				<input class="input-text" type="text" name="personal_email" value=<%= @user.personal_email %>>
 			<label>
 			<br>
 			<label>Work Email
-				<input class="input-text-edit" type="text" name="professional_email" value=<%= @user.professional_email %>>
+				<input class="input-text" type="text" name="professional_email" value=<%= @user.professional_email %>>
 			<label>
 			<br>
 			<label>Position
-				<input class="input-text-edit" type="text" name="position" value=<%= @user.position %>>
+				<input class="input-text" type="text" name="position" value=<%= @user.position %>>
 			<label>
 			<br>
 			<label>Company
-				<input class="input-text-edit" type="text" name="company" value=<%= @user.company %>>
+				<input class="input-text" type="text" name="company" value=<%= @user.company %>>
 			<label>
 			<br>
 			<label>Website
-				<input class="input-text-edit" type="text" name="website" value=<%= @user.website %>>
+				<input class="input-text" type="text" name="website" value=<%= @user.website %>>
 			<label>
 			<br>
-			<button class="input-submit" id="submit-edit">Submit Changes</button>
+			<button class="input-submit" id="submit-edit">Submit Changes</button><br><br>
 		</form>
 	</div>
 	<a href="/users/<%= @user.id %>"><button>Cancel</button></a>
@@ -145,16 +194,17 @@
 <!-- VIEW Connections Template -->
 
 <script id="connections-all-template" type="text/javascript">
-	<h2>Your OnTacts</h2>
+	<h2 class="form-h2">Your OnTacts</h2>
 
 	<div id="scrolladex">
 		<% @connected_users.each do |user| %>
 			<div class="item connection-card" id="<%= user.username %>">
-				<div class="card-image">
-					<img src=<%= user.image %>>
+				<div class="card-image-div-scrolladex">
+					<img class="card-image-scrolladex" src=<%= user.image %>>
 				</div>
-				<div class="card-info">
+				<div class="card-info-scrolladex">
 					<h3><%= user.f_name %> <%= user.l_name %></h3>
+					<p class="headline-scrolladex"><%= user.headline %></p><br>
 					<p><%= user.position %> <%= user.company %></p>
 					<p><%= user.username %></p>
 				</div>
@@ -175,19 +225,19 @@
 		<% @requests.each do |request| %>
 			<div class="request-card-view" id=<%= request.id %>>
 				<div class="request-image-div"><img class="request-image" src="<%= request.initiator.image %>"></div>
-				<h3><%= request.initiator.f_name %> <%= request.initiator.l_name %></h3>
-				<p><%=request.initiator.position%> | <%= request.initiator.company %></p>
-				<div id="accept">
+					<h3><%= request.initiator.f_name %> <%= request.initiator.l_name %></h3>
+					<p><%=request.initiator.position%> | <%= request.initiator.company %></p>
+				<div id="accept" class="accept">
 					<p>accept</p>
 				</div>
 
-				<div id="reject">
+				<div id="reject" class="reject clearfix">
 					<p>reject</p>
 				</div>
 
 			</div>
 		<% end %>
-	</div>
+	</div><br><br>
 
 </script>
 
