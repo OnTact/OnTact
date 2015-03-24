@@ -167,7 +167,7 @@ footer p {
 	font-size: 20px;		
 }
 
-.input-text-edit{
+/*.input-text-edit{
 	width: 300px;
 	border: 1px solid;
 	border-color: #4d4d4d;
@@ -177,7 +177,7 @@ footer p {
 	margin: 0 auto;
 	display: block;		
 
-}
+}*/
 
 .input-submit{
 	width: 300px;
@@ -403,18 +403,67 @@ footer p {
 	border-color: #4d4d4d;
 }
 
-.edit-avatar-divs {
-	float: left;
-	display: block;
-}
-
 /*EDIT CURRENT USER*/
 
 #profile-edit {
-	width: 600px;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 }
 
+#edit-all-section{
+	margin: 20 0 20 0;
+}
+
+#edit-info-section {
+	float: left;
+	margin: 0 auto;
+	/*margin: 10 0 30 0;*/
+	/*width: 800px;*/
+}
+
+#edit-info-1 {
+	float: left;
+	/*width: 350px;*/
+	margin: 0 auto;
+	margin-right: 10%;
+}
+
+#edit-info-2 {
+	float: left;
+	/*width: 350px;*/
+	margin: 0 auto;
+	margin-right: 10%;
+}
+
+.edit-info-label{
+
+}
+
+#edit-avatar-section {
+	float: left;
+	margin: 0 0 30 0;
+	/*max-width: 40%;*/
+}
+
+.edit-avatar-divs {
+	float: left;
+	text-align: center;	
+}
+
+.edit-avatar-img{
+	/*max-width: 50px;*/
+	max-height: 100px;
+	display: inline-block;
+	margin: 10 10 30 10;
+}
+
+.edit-avatar-radio{
+	display: inline-block;
+	margin-top: 10px;
+}
+
+#submit-edit {
+
+}
 /* AVATAR SELECTORS */
 
 /*select#avatar option[value="Panda"]{

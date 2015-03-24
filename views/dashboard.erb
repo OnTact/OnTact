@@ -79,113 +79,136 @@
 	<div id="profile-edit">
 	<h2 class="form-h2">Edit Your OnTact Info</h2>
 		<form method="POST" action="/users/<%= @user.id %>">
-			<input type="hidden" name="_method" value="PUT"/>
-			<label>First Name
-				<input class="input-text" type="text" name="f_name" value=<%= @user.f_name %>>
-			<label>
-			<br>
-			<label>Last Name
-				<input class="input-text" type="text" name="l_name" value=<%= @user.l_name %>>
-			<label>
-			<br>
-			<label>Headline
-				<input class="input-text" type="text" name="headline" value=<%= @user.headline %>>
-			<label>
-			<br>
-			<label>Avatar</label>
-				<div class="edit-avatar-divs">
-					<img src="/images/avatars/BaoBao.png">
-					<br>
-					<input type="radio" name="image" value="/images/avatars/BaoBao.png">BaoBao
-					<br>
-				<div>
+		<div id="edit-all-section">
+				<div id="edit-info-section class="edit-info-label"">
+					<div id="edit-info-1">
+						<input type="hidden" name="_method" value="PUT"/>
+						<label class="edit-info-label">First Name</label>
+							<input class="input-text" type="text" name="f_name" value=<%= @user.f_name %>>
+						<br>
+						<label class="edit-info-label">Last Name</label>
+							<input class="input-text" type="text" name="l_name" value=<%= @user.l_name %>>
+						<br>
+						<label class="edit-info-label">Headline</label>
+							<input class="input-text" type="text" name="headline" value=<%= @user.headline %>>
 
-				<div class="edit-avatar-divs">
-					<img src="/images/avatars/Benedict.png">
+						<br>
+						<label class="edit-info-label">Personal Phone</label>
+							<input class="input-text" type="text" name="personal_phone" value=<%= @user.personal_phone %>>
+						
+						<br>
+						<label class="edit-info-label">Work Phone</label>
+							<input class="input-text" type="text" name="professional_phone" value=<%= @user.professional_phone %>>
+					</div>	
+					<div id="edit-info-2">
+						<label class="edit-info-label">Personal Email</label>
+							<input class="input-text" type="text" name="personal_email" value=<%= @user.personal_email %>>
+						
+						<br>
+						<label class="edit-info-label">Work Email</label>
+							<input class="input-text" type="text" name="professional_email" value=<%= @user.professional_email %>>
+						
+						<br>
+						<label class="edit-info-label">Position</label>
+							<input class="input-text" type="text" name="position" value=<%= @user.position %>>
+						<label class="edit-info-label">
+						<br>
+						<label class="edit-info-label">Company</label>
+							<input class="input-text" type="text" name="company" value=<%= @user.company %>>
+						
+						<br>
+						<label class="edit-info-label">Website</label>
+							<input class="input-text" type="text" name="website" value=<%= @user.website %>>
+					</div>
 					<br>
-					<input type="radio" name="image" value="/images/avatars/Benedict.png">Benedict
-					<br>
-				<div>
+				</div>
 
-				<div class="edit-avatar-divs">
-					<img src="/images/avatars/Blitzen.png">
-					<br>
-					<input type="radio" name="image" value="/images/avatars/Blitzen.png">Blitzen
-					<br>
-				<div>
+				<div id="edit-avatar-section">
+					<h3>Edit Avatar</h3>
+					<div class="edit-avatar-divs">
+						<img class="edit-avatar-img" src="/images/avatars/BaoBao.png">
+						<br>
+						BaoBao
+						<br>
+						<input class="edit-avatar-radio
+						" type="radio" name="image" value="/images/avatars/BaoBao.png">
+					</div>
 
-				<div class="edit-avatar-divs">
-					<img src="/images/avatars/Henry.png">
-					<br>
-					<input type="radio" name="image" value="/images/avatars/Henry.png">Henry
-					<br>
-				<div>
+					<div class="edit-avatar-divs">
+						<img class="edit-avatar-img" src="/images/avatars/Benedict.png">
+						<br>
+						Benedict
+						<br>
+						<input class="edit-avatar-radio
+						" type="radio" name="image" value="/images/avatars/Benedict.png">
+					</div>
 
-				<div class="edit-avatar-divs">
-					<img src="/images/avatars/Hubert.png">
-					<br>
-					<input type="radio" name="image" value="/images/avatars/Hubert.png">Hubert
-					<br>
-				<div>
+					<div class="edit-avatar-divs">
+						<img class="edit-avatar-img" src="/images/avatars/Blitzen.png">
+						<br>
+						Blitzen
+						<br>
+						<input class="edit-avatar-radio
+						" type="radio" name="image" value="/images/avatars/Blitzen.png">
+					</div>
 
-				<div class="edit-avatar-divs">
-					<img src="/images/avatars/Petra.png">
-					<br>
-					<input type="radio" name="image" value="/images/avatars/Petra.png">Petra
-					<br>
-				<div>
+					<div class="edit-avatar-divs">
+						<img class="edit-avatar-img" src="/images/avatars/Henry.png">
+						<br>
+						Henry
+						<br>
+						<input class="edit-avatar-radio
+						" type="radio" name="image" value="/images/avatars/Henry.png">
+					</div>
 
-				<div class="edit-avatar-divs">
-					<img src="/images/avatars/Stefon.png">
-					<br>
-					<input type="radio" name="image" value="/images/avatars/Stefon.png">Stefon
-					<br>
-				<div>
+					<div class="edit-avatar-divs">
+						<img class="edit-avatar-img" src="/images/avatars/Hubert.png">
+						<br>
+						Hubert
+						<br>
+						<input class="edit-avatar-radio
+						" type="radio" name="image" value="/images/avatars/Hubert.png">
+					</div>
 
-				<div class="edit-avatar-divs">
-					<img src="/images/avatars/Thaddeus.png">
-					<br>
-					<input type="radio" name="image" value="/images/avatars/Thaddeus.png">Thaddeus
-					<br>
-				<div>
+					<div class="edit-avatar-divs">
+						<img class="edit-avatar-img" src="/images/avatars/Petra.png">
+						<br>
+						Petra
+						<br>
+						<input class="edit-avatar-radio
+						" type="radio" name="image" value="/images/avatars/Petra.png">
+					</div>
 
-				<div class="edit-avatar-divs">
-					<img src="/images/avatars/Thomas.png">
-					<br>
-					<input type="radio" name="image" value="/images/avatars/Thomas.png">Thomas
-					<br>
-				<div>
+					<div class="edit-avatar-divs">
+						<img class="edit-avatar-img" src="/images/avatars/Stefon.png">
+						<br>
+						Stefon
+						<br>
+						<input class="edit-avatar-radio
+						" type="radio" name="image" value="/images/avatars/Stefon.png">
+					</div>
 
+					<div class="edit-avatar-divs">
+						<img class="edit-avatar-img" src="/images/avatars/Thaddeus.png">
+						<br>
+						Thaddeus
+						<br>
+						<input class="edit-avatar-radio
+						" type="radio" name="image" value="/images/avatars/Thaddeus.png">
+					</div>
+
+					<div class="edit-avatar-divs">
+						<img class="edit-avatar-img" src="/images/avatars/Thomas.png">
+						<br>
+						Thomas
+						<br>
+						<input class="edit-avatar-radio
+						" type="radio" name="image" value="/images/avatars/Thomas.png">
+					</div>
+				</div>
+			</div>
 			<br>
-			<label>Personal Phone
-				<input class="input-text" type="text" name="personal_phone" value=<%= @user.personal_phone %>>
-			<label>
-			<br>
-			<label>Work Phone
-				<input class="input-text" type="text" name="professional_phone" value=<%= @user.professional_phone %>>
-			<label>
-			<br>
-			<label>Personal Email
-				<input class="input-text" type="text" name="personal_email" value=<%= @user.personal_email %>>
-			<label>
-			<br>
-			<label>Work Email
-				<input class="input-text" type="text" name="professional_email" value=<%= @user.professional_email %>>
-			<label>
-			<br>
-			<label>Position
-				<input class="input-text" type="text" name="position" value=<%= @user.position %>>
-			<label>
-			<br>
-			<label>Company
-				<input class="input-text" type="text" name="company" value=<%= @user.company %>>
-			<label>
-			<br>
-			<label>Website
-				<input class="input-text" type="text" name="website" value=<%= @user.website %>>
-			<label>
-			<br>
-			<button class="input-submit" id="submit-edit">Submit Changes</button><br><br>
+			<button class="input-submit clear" id="submit-edit">Submit Changes</button><br><br>
 		</form>
 	</div>
 	<a href="/users/<%= @user.id %>"><button>Cancel</button></a>
