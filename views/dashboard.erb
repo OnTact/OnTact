@@ -24,52 +24,47 @@
 <script type="text/javascript" id="profile-view-template">
 	<div id="personal-card">
 		<h2>Personal</h2>
-		<div class="card-image">
-			<img src=<%= @user.image %>>
-		</div>
-		<div class="card-info">
-			<h3><%= @user.f_name %> <%= @user.l_name %></h3>
-			<p><%= @user.headline %></p>
-
-			<h4>Personal Phone</h4>
-			<p><%= @user.personal_phone %></p>
-
-			<h4>Work Phone</h4>
-			<p><%= @user.professional_phone %></p>
-
-			<h4>Personal Email</h4>
-			<p><%= @user.personal_email %></p>
-
-			<h4>Work Email</h4>
-			<p><%= @user.professional_email %></p>
-
-			<p><%= @user.position %> | <%= @user.company %> | <%= @user.website %></p>
-
+		<div class="cardview">
+			<div class="card-image-div">
+				<img class="card-image" src=<%= @user.image %>>
+			</div>
+			<div class="card-info">
+				<h3><%= @user.f_name %> <%= @user.l_name %></h3>
+				<p class="card-headline"><%= @user.headline %></p>
+				<br>
+				<hr>
+				<p><span style="font-weight: bold;">Personal:</span> <%= @user.personal_phone %></p>
+				<p><span style="font-weight: bold;">Work:</span> <%= @user.professional_phone %></p>
+				<p><span style="font-weight: bold;">Personal:</span> <%= @user.personal_email %></p>
+				<p><span style="font-weight: bold;">Work:</span> <%= @user.professional_email %></p>
+				<p><%= @user.position %> | <%= @user.company %> | <%= @user.website %></p>
+			</div>
 		</div>
 	</div>
 
 	<div id="professional-card" class="clearfix">
 		<h2>Professional</h2>
-		<div class="card-image">
-			<img src=<%= @user.image %>>
-		</div>
-		<div class="card-info">
-			<h3><%= @user.f_name %> <%= @user.l_name %></h3>
-			<p><%= @user.headline %></p>
+		<div class="cardview">
+			<div class="card-image-div">
+				<img class="card-image" src=<%= @user.image %>>
+			</div>
+			<div class="card-info">
+				<h3><%= @user.f_name %> <%= @user.l_name %></h3>
+				<p class="card-headline"><%= @user.headline %></p>
+				<br>
+				<hr>
 
-			<h4>Work Phone</h4>
-			<p><%= @user.professional_phone %></p>
+				<p><span style="font-weight: bold;">Phone:</span> <%= @user.professional_phone %></p>
 
-			<h4>Work Email</h4>
-			<p><%= @user.professional_email %></p>
-
-			<p><%= @user.position %> | <%= @user.company %> | <%= @user.website %></p>
+				<p><span style="font-weight: bold;">Email:</span> <%= @user.professional_email %></p>
+				<p><%= @user.position %> | <%= @user.company %> | <%= @user.website %></p>
+			</div>
 		</div>
 	</div>
 
 	<br>
 
-	<div id="profile-edit-button">Edit<div><br><br><br>
+	<div id="profile-edit-button" class="clear">Edit<div><br><br><br>
 </script>
 
 <!-- profile-edit-template -->
