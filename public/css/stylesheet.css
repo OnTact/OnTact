@@ -288,24 +288,38 @@ footer p {
 }
 
 .request-image-div {
+	display: block;
+	margin: 0 auto;
 
+}
+
+.request-image {
+	max-height: 100px;
+	text-align: center;
 }
 
 .accept{
 	float: left;
-	color: #fff;
+	color: #eb5b23;
+	background-color: #fff;
+	padding: 0 5 0 5;
+	font-weight: bold;
 	bottom: 1;
+	margin-left: 30%;
 }
 
 .reject{
 	float: right;
-	color: #fff;
+	color: #4d4d4d;
+	padding: 0 5 0 5;
+	background-color: #fff;
 	bottom: 1;
+	margin-right: 30%;
 }
 
 /*SEARCH RESULTS*/
 #search-result-template {
-	width: 600px;
+	width: 500px;
 	margin: 0 auto;
 }
 
@@ -317,24 +331,45 @@ footer p {
 }
 
 .srch-rslt-preview {
-	margin: 10 20 30 20;
-	padding: 10;
-	min-height: 200px;
-	width: 400px;
+	background-color: #F8ECC2;
+	background-image: url('/images/cardassets/cardboard-texture-600x400.jpg');
+	background-position: center;
 
-	background-color: #f8f7f2;
-	border: 1px solid black;
-
+	width: 450px;
+	min-height: 250px;
 	margin: 0 auto;
+	margin: 10 10 10 10;
+	padding: 10 10 10 10;
+}
+
+.srch-rslt-preview h3 {
+	font-size: 1.5em;
+	text-align: center;
+
+}
+
+.srch-rslt-preview p {
+	font-size: 1.2em;
 }
 
 .srch-rslt-preview p{
-	font: 14px;
+	font: 1.2em;
 }
 
 #add-search-result-template {
-	width: 400px;
+	width: 550px;
 	margin: 0 auto;
+}
+
+#srch-rslt-select {
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	background-color: #ffffff;
+	font-size: 1.2em;
+	padding: 10 0 10 0;
+	height: 45px;
 }
 
 #invite-to-button-div {
@@ -399,6 +434,11 @@ footer p {
 	text-align: center;
 }
 
+.card-view-name {
+	font-size: 1.5em;
+	text-align: center;	
+}
+
 .card-headline{
 	font-weight: bold;
 	font-size: 1.2em;
@@ -413,6 +453,17 @@ footer p {
 	margin: 0 auto;
 }
 
+.card-view-hr {
+	width: 100px;
+	border: 1px solid #eb5b23;
+	text-align: center;
+	margin: 0 auto;	
+}
+
+#view-connection-template {
+	width: 550px;
+	margin: 0 auto;
+}
 
 #profile-edit-button {
 	padding: 10 20 10 20;
