@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     user.password = params[:password]
     user.f_name = params[:f_name]
     user.l_name = params[:l_name]
-    user.image = "./images/PandaAvatar.jpg"
+    user.image = "./images/avatars/BaoBao.png"
     user.save!
 
     redirect '/'

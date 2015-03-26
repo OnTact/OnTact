@@ -143,8 +143,28 @@ $(function(){
 	// INVITE CONNECTION
 		$('body').on('click', "#invite-to-button-div", function(){
 			var inviteTemplate = $("#invite-template");
+			// create email invite
+			$("#invite-form-button").on("click", function(e){
+				e.preventDefault();
+				console.log('clicked');
+				var name = $("#invite-name").val();
+				var email = $("#invite-email").val();
+				debugger
+				$.ajax({
+					url: "/leads",
+					type: "POST",
+					data: {name: name, email: email}
+				}).done(function(data){
+					debugger
+					alert(data);
+					$("#invite-name").val("");
+					$("#invite-email").val("");
+				})
+			});
 			loadDom(inviteTemplate);
 		});	
+
+
 
 	// ADD CONNECTIONS general function
 	function addConnection(){
@@ -152,22 +172,6 @@ $(function(){
 		// render add contact form
 		var addTemplate = $("#add-connection-template");
 		loadDom(addTemplate);
-
-		// create email invite
-		$("#invite-form").on("submit", function(e){
-			e.preventDefault();
-			var name = $("#invite-name").val()
-			var email = $("#invite-email").val()
-			$.ajax({
-				url: "/leads",
-				type: "POST",
-				data: {name: name, email: email}
-			}).done(function(data){
-				alert(data);
-				$("#invite-name").val("");
-				$("#invite-email").val("");
-			})
-		});
 
 		// render send-request-template
 		$("#find-connection-bttn").on('click', function(e){
