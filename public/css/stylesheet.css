@@ -359,48 +359,69 @@ footer p {
 
 /*PROFILE VIEW - CURRENT USER*/
 
+#profile-view-template {
+	margin: 0 auto;
+	width: 90%;
+}
+
 #personal-card {
 	float: left;
-	
-	margin: 10 20 30 20;
-	padding: 10;
-	min-height: 300px;
-	width: 500px;
-
-	background-color: #f8f7f2;
-	border: 1px solid black;
-
-	line-height: 25px;
+	margin: 0 auto;
 }
 
 #professional-card {
 	float: left;
-	
-	margin: 10 20 30 20;
-	padding: 10;
-	min-height: 300px;
-	width: 500px;
-
-	background-color: #f8f7f2;
-	border: 1px solid black;
-
-	line-height: 25px;
+	margin: 0 auto;
 }
 
+.cardview {
+	background-color: #F8ECC2;
+	background-image: url('/images/cardassets/cardboard-texture-600x400.jpg');
+	background-position: center;
+
+	width: 525px;
+	min-height: 325px;
+	margin: 10 10 10 10;
+	padding: 10 10 10 10;
+}
+
+.card-image-div {
+}
+
+.card-image {
+	max-height: 200px;
+	display: block;
+	margin: 0 auto;
+}
+
+.card-info h3 {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.card-headline{
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: center;
+	color: #FFF;
+}
+
+.card-info hr {
+	width: 100px;
+	border: 1px solid #eb5b23;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
 #profile-edit-button {
-	clear: both;
-	width: 30px;
 	padding: 10 20 10 20;
 	/*margin: ;*/
 	margin: 0 auto;
 	text-align: center;
 
-	color: #f8f7f2;
-	font-size: 16;
-	background-color: #666;
-
-	border: 1px solid;
-	border-color: #4d4d4d;
+	color: #666;
+	font-size: 2em;
 }
 
 /*EDIT CURRENT USER*/
@@ -493,7 +514,6 @@ select#avatar option[value="Leprechaun"]{
 	max-height: 250px;
 	margin: 10 10 10 10;
 	padding: 10 10 10 10;
-
 }
 
 .card-image-div-scrolladex {
