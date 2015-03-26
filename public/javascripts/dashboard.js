@@ -69,17 +69,37 @@ $(function(){
 						$container.empty();
 
 						// search result template
-						var $template = $('<div id="view-connection-template">')
+						var $template = $('<div id="view-connection-template" class="cardview">')
 						$container.append($template);
 							// append header "connect with >username?"
 						
-						var $h3 = $('<h3">').text(userParsed.f_name + " " +userParsed.l_name);
-						var $p1 = $('<p>').text(userParsed.position + " | " + userParsed.company);
-						var $p2 = $('<p>').text(userParsed.username);
 
+						var $img = $('<img class="card-image" src="'+userParsed.image+'"">');
+						var $h3 = $('<h3 class="card-view-name">').text(userParsed.f_name + " " +userParsed.l_name);
+						var $p0 = $('<p class="card-headline">').text(userParsed.headline);
+
+
+						var $br = $('<br>');
+						var $hr = $('<hr class="card-view-hr">');
+
+						var $p1 = $('<p>').text(userParsed.position + " | " + userParsed.company + " | " + userParsed.website);
+						var $p2 = $('<p>').text("Personal: " + userParsed.personal_phone);
+						var $p3 = $('<p>').text("Work: " + userParsed.professional_phone);
+						var $p4 = $('<p>').text("Personal: " + userParsed.personal_email);
+						var $p5 = $('<p>').text("Work: " + userParsed.professional_email);
+
+						$template.append($img);
 						$template.append($h3);
-						$template.append($p1);
+						$template.append($p0);
+
+						$template.append($br);
+						$template.append($hr);
+
 						$template.append($p2);
+						$template.append($p3);
+						$template.append($p4);
+						$template.append($p5);
+						$template.append($p1);
 					});
 				};
 			});
@@ -168,12 +188,12 @@ $(function(){
 				var $searchResultTemplate = $('<div id="search-result-template">')
 				$container.append($searchResultTemplate);
 				// append header "connect with >username?"
-				var $resultHeader = $('<h3 class="srch-rslt-header">').text("Connect with >"+parsedConnection.username)
+				var $resultHeader = $('<h3 class="srch-rslt-header">').text("Connect with +"+parsedConnection.username)
 				$searchResultTemplate.append($resultHeader);
 				// append connection preview card
 				var $resultPreviewCard = $('<div class="srch-rslt-preview">')
 				$searchResultTemplate.append($resultPreviewCard);
-				
+			
 				var $h3 = $('<h3 class="srch-rslt-header">').text(parsedConnection.f_name + " " +parsedConnection.l_name);
 				var $p1 = $('<p>').text(parsedConnection.position + " | " + parsedConnection.company);
 				var $p2 = $('<p>').text(parsedConnection.username);
@@ -193,11 +213,19 @@ $(function(){
 				var $hiddenInput = $('<input type="hidden" name="receiver_id" value='+ parsedConnection.id +'>')
 				var $connectSubmit = $('<input class="input-submit"type="submit" value="Request To Connect">')
 
-				$connectForm.append($connectionTypePro);
-				$connectForm.append($connectTypePer);
+				var $select = $('<select id="srch-rslt-select"><option class="srch-rslt-select-option"name="connection_type" value="professional">Professional</option><option class="srch-rslt-select-option"name="connection_type" value="personal">Personal</option></select>')
+				var $option1 = $('<option class="srch-rslt-select-option"name="connection_type" value="professional">Professional</option>')
+				var $option2 = $('<option class="srch-rslt-select-option"name="connection_type" value="personal">Personal</option>')
+
+				var $br = $('<br>');
+
+				$connectForm.append($select);
 				$connectForm.append($connectInfo);
 				$connectForm.append($hiddenInput);
 				$connectForm.append($connectSubmit);
+				$connectForm.append($br);
+				$connectForm.append($br);
+				$connectForm.append($br);
 
 				$addSearchResultTemplate.append($connectForm);
 				$container.append($addSearchResultTemplate);
